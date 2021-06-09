@@ -1,6 +1,13 @@
 import { applySession } from "next-session";
+
+import Layout from "../components/layout";
+
 export default function Page({ userData }) {
-  return <div>{JSON.stringify(userData, null, 2)}</div>;
+  return (
+    <Layout>
+      <div>{JSON.stringify(userData, null, 2)}</div>
+    </Layout>
+  );
 }
 
 export async function getServerSideProps({ req, res }) {

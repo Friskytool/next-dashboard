@@ -1,5 +1,14 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
+/* ./styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+.title-gradient {
+  background: -webkit-linear-gradient(45deg, #6200ff, #4bb7ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
