@@ -3,13 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
+    "autoprefixer": "^10.2.6",
+    "cookie": "^0.4.1",
+    "cookies": "^0.8.0",
+    "cross-env": "^7.0.3",
+    "crypto-js": "^4.0.0",
     "next": "10.x",
+    "next-session": "^3.4.0",
+    "postcss": "^8.3.0",
     "react": "17.x",
-    "react-dom": "17.x"
+    "react-cookie": "^4.0.3",
+    "react-cookies": "^0.1.1",
+    "react-dom": "17.x",
+    "tailwindcss": "^2.1.4"
   }
 }
