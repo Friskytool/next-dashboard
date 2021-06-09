@@ -22,7 +22,7 @@ function handler(req, res) {
       process.env.CLIENT_ID
     }&redirect_uri=${encodeURIComponent(
       `${h}${req.headers.host}`
-    )}%2fapi%2fcallback&response_type=code&scope=guilds%20identify&prompt=none`;
+    )}%2fapi%2fcallback&response_type=code&scope=guilds%20identify`;
     console.log(uri);
     res.redirect(uri, 302);
   }
