@@ -14,7 +14,7 @@ function Header() {
       <div
         id={styles.dropdownLines}
         className={isClicked ? styles.changeIcon : ""}
-        onClick={handleClick}
+        onClick={() => setClick(!isClicked)}
       >
         <div id={styles.line1}></div>
         <div id={styles.line2}></div>
@@ -47,14 +47,6 @@ function Header() {
       </div>
     </div>
   );
-
-  function handleClick() {
-    if (isClicked) {
-      setClick(false);
-    } else {
-      setClick(true);
-    }
-  }
 }
 
 export default Header;
