@@ -35,3 +35,7 @@ yarn-error.log*
 
 # local env 
 .env
+
+# package stuff handled by vercel
+package-lock.json
+yarn.lock
