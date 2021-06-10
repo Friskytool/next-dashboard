@@ -1,5 +1,5 @@
 import styles from "../styles/Home.module.css";
-import Header from "../components/Header";
+import Header from "../components/header";
 import Layout from "../components/layout";
 import Link from "next/link";
 
