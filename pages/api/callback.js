@@ -46,7 +46,7 @@ async function handler(req, res) {
     res.redirect(req.session.location, 301);
     req.session.location = null;
   } else {
-    res.redirect("/", 302);
+    res.redirect("/dashboard", 302);
   }
 }
 

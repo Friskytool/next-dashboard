@@ -1,194 +1,25 @@
 #headerContainer {
-  display: block;
-  font-family: "Roboto";
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-#logo {
-  font-family: "Roboto";
-  position: relative;
-  padding: 5px;
-  margin: 5px;
-  font-size: 40px;
+#mainLogoContainer {
   display: inline-block;
-  cursor: pointer;
-  float: left;
-  z-index: 2;
+  margin: 20px;
 }
 
-.list {
-  text-decoration: none;
-  color: black;
+#discordLogoMenuBar {
+  height: 50px;
+  width: auto;
 }
 
-.list:hover {
-  color: gray;
+#discordSvgContainer {
+  margin: 30px;
+  color: #919191;
+  height: 50px;
 }
 
-@media only screen and (min-width: 1000px) {
-  .changeList {
-    display: inline-block;
-    margin: 0;
-    float: right;
-  }
-
-  #listContainer {
-    text-align: right;
-  }
-
-  #dropdownLines {
-    display: none;
-  }
-
-  #headerList {
-    display: inline-block;
-    list-style: none;
-    font-size: 20px;
-    margin: 10px;
-  }
-
-  #headerList li {
-    display: inline-block;
-    cursor: pointer;
-    margin: 20px;
-  }
-}
-
-@media only screen and (min-width: 600px) and (max-width: 1000px) {
-  #dropdownLines {
-    position: relative;
-    display: inline-block;
-    float: right;
-    margin: 15px 5px 0px 0px;
-    cursor: pointer;
-    z-index: 2;
-  }
-
-  #dropdownLines div {
-    background-color: black;
-    width: 35px;
-    height: 2px;
-    margin: 7px;
-    transition: 0.4s;
-  }
-
-  #headerList {
-    transition: 0.4s;
-    padding: 0;
-    width: 100%;
-    height: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    overflow-x: hidden;
-    background-color: white;
-  }
-
-  #headerList li:first-child {
-    margin-top: 100px;
-  }
-
-  #headerList li {
-    margin-left: 50px;
-    margin-bottom: 50px;
-    list-style: none;
-    font-size: 35px;
-    cursor: pointer;
-  }
-
-  #headerList li:hover {
-    color: gray;
-  }
-
-  .changeList #headerList {
-    height: 100%;
-  }
-
-  .changeIcon #line1 {
-    -webkit-transform: rotate(-45deg) translate(-5px, 5px);
-    transform: rotate(-45deg) translate(-5px, 5px);
-  }
-
-  .changeIcon #line2 {
-    opacity: 0;
-  }
-
-  .changeIcon #line3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  #logo {
-    font-size: 25px;
-  }
-
-  #headerList {
-    transition: 0.4s;
-    padding: 0;
-    height: 0;
-    width: 100%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    overflow-x: hidden;
-    background-color: white;
-  }
-
-  #headerList li:first-child {
-    margin-top: 80px;
-  }
-
-  #headerList li {
-    margin-left: 50px;
-    margin-bottom: 50px;
-    list-style: none;
-    font-size: 35px;
-    cursor: pointer;
-  }
-
-  #headerList li:hover {
-    color: gray;
-  }
-
-  .changeList #headerList {
-    height: 100%;
-  }
-
-  #dropdownLines {
-    display: inline-block;
-    position: relative;
-    z-index: 2;
-    float: right;
-    margin: 15px 5px 0px 0px;
-    cursor: pointer;
-  }
-
-  #dropdownLines div {
-    background-color: black;
-    width: 35px;
-    height: 2px;
-    margin: 7px;
-    transition: 0.4s;
-  }
-
-  .changeIcon #line1 {
-    -webkit-transform: rotate(-45deg) translate(-5px, 5px);
-    transform: rotate(-45deg) translate(-5px, 5px);
-  }
-
-  .changeIcon #line2 {
-    opacity: 0;
-  }
-
-  .changeIcon #line3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  #logo {
-    font-size: 20px;
-  }
+#discordSvgContainer:hover {
+  color: #4b4b4b;
 }

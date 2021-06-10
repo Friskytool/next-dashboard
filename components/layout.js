@@ -1,8 +1,7 @@
-import Header from "./header";
 import Head from "next/head";
 import styles from "./styles/header.module.css";
 
-export default function Layout({ children, home }) {
+export default function Layout({ children }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -26,7 +25,6 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={"Friskytool Dashboard"} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <Header />
       <main>{children}</main>
     </div>
   );

@@ -4,13 +4,13 @@ import { withSession } from "next-session";
 function handler(req, res) {
   const data = req.session.userData;
   if (data) {
-    // if (req.session.location) {
-    //   res.redirect(req.session.location, 301);
-    //   req.session.location = null;
-    // } else {
-    //   res.redirect("/", 302);
-    // }
-    res.status(200).json({ data: data });
+    if (req.session.location) {
+      res.redirect(req.session.location, 301);
+      req.session.location = null;
+    } else {
+      res.redirect("/", 302);
+    }
+    //res.status(200).json({ data: data });
   } else {
     let h;
     if (req.headers.host.startsWith("localhost:")) {
