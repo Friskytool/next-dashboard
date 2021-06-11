@@ -13,6 +13,7 @@ export default function Page({ userData }) {
 export async function getServerSideProps({ req, res }) {
   await applySession(req, res);
   var data;
+  console.log(req.session);
   if (req.session.userData) {
     let userData = req.session.userData;
     let fetchData = await fetch("https://discordapp.com/api/v8/users/@me", {
@@ -23,6 +24,13 @@ export async function getServerSideProps({ req, res }) {
       props: { userData: data },
     };
   } else {
+    return {
+      props: {
+        p: req.session.profileData || null,
+        u: req.session.userData || null,
+      },
+    };
+
     req.session.location = req.url;
     res.writeHead(302, { Location: "/api/login" }).end();
 
