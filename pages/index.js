@@ -152,6 +152,9 @@ export default function Home({ profileData }) {
                     "linear-gradient(321.73deg,#ffcd4b -1.09%,#ee6315 100.65%)",
                   color: "transparent",
                   backgroundClip: "text",
+                  color: "transparent",
+                  "-webkit-background-clip": "text",
+                  "-webkit-text-fill-color": "transparent",
                 }}
               >
                 Invite Now!
