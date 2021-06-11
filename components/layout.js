@@ -1,9 +1,10 @@
 import Head from "next/head";
+import Header from "./header";
 import styles from "./styles/header.module.css";
 
-export default function Layout({ children }) {
+export default function Layout({ children, ...props }) {
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${styles.background}`}>
       <Head>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
@@ -25,7 +26,10 @@ export default function Layout({ children }) {
         <meta name="og:title" content={"Friskytool Dashboard"} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <main>{children}</main>
+      <Header {...props} />
+      <div>
+        <main>{children}</main>
+      </div>
     </div>
   );
 }

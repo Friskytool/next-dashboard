@@ -40,6 +40,11 @@ async function handler(req, res) {
       "Content-Type": "application/x-www-form-urlencoded",
     };
     req.session.userData = userData;
+
+    const rawProfileData = await fetch("https://discord.com/api/v8/users/@me", {
+      headers: userData.headers,
+    });
+    req.session.profileData = await rawProfileData.json();
   }
 
   if (req.session.location) {
