@@ -81,7 +81,8 @@ export async function getServerSideProps({ req, res }) {
   await applySession(req, res);
   if (!req.session.userData) {
     req.session.location = req.url;
-    return res.writeHead(302, { Location: "/api/login" }).end();
+    res.writeHead(302, { Location: "/api/login" }).end();
+    return { props: { profileData: {} } };
   }
   return { props: { profileData: req.session.profileData } };
 }

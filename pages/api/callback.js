@@ -32,6 +32,7 @@ async function handler(req, res) {
     body: payload,
   });
   const userData = await fetchResp.json();
+  console.log(userData);
   if (!("error" in userData) && userData["scope"] == "guilds identify") {
     let d = new Date();
     userData["expires_at"] = d.setTime(d.getTime() + userData["expires_in"]);
@@ -46,10 +47,14 @@ async function handler(req, res) {
     });
     req.session.profileData = await rawProfileData.json();
   }
-
+  return res
+    .status(200)
+    .json({ data: { p: req.session.profileData, u: req.session.userData } });
+  console.log(req.session);
   if (req.session.location) {
-    res.redirect(req.session.location, 301);
+    const loc = `${req.session.location}`;
     req.session.location = null;
+    res.redirect(loc, 301);
   } else {
     res.redirect("/dashboard", 302);
   }
