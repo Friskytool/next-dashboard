@@ -2,7 +2,7 @@ import { useState } from "react";
 import Link from "next/link";
 import styles from "./styles/header.module.css";
 import Image from "next/image";
-
+import useUser from "../utils/useUser";
 //import {disableBodyScroll, enableBodyScroll} from 'body-scroll-lock';
 
 /*
@@ -14,8 +14,8 @@ import Image from "next/image";
 
 */
 
-function Header({ ...props }) {
-  console.log(props.profileData);
+function Header({}) {
+  const { user } = useUser();
   const [isClicked, setClick] = useState(false);
 
   return (

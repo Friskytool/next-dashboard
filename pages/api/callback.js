@@ -1,4 +1,4 @@
-import { withSession } from "next-session";
+import withSession from "../../utils/session";
 
 const { URLSearchParams } = require("url");
 
@@ -32,7 +32,6 @@ async function handler(req, res) {
     body: payload,
   });
   const userData = await fetchResp.json();
-  console.log(userData);
   if (!("error" in userData) && userData["scope"] == "guilds identify") {
     let d = new Date();
     userData["expires_at"] = d.setTime(d.getTime() + userData["expires_in"]);
@@ -40,21 +39,22 @@ async function handler(req, res) {
       Authorization: `Bearer ${userData["access_token"]}`,
       "Content-Type": "application/x-www-form-urlencoded",
     };
-    req.session.userData = userData;
 
     const rawProfileData = await fetch("https://discord.com/api/v8/users/@me", {
       headers: userData.headers,
     });
-    req.session.profileData = await rawProfileData.json();
+    const profileData = await rawProfileData.json();
+
+    req.session.set("profile", profileData);
+    req.session.set("user", userData);
+    await req.session.save();
   }
-  return res
-    .status(200)
-    .json({ data: { p: req.session.profileData, u: req.session.userData } });
-  console.log(req.session);
-  if (req.session.location) {
-    const loc = `${req.session.location}`;
-    req.session.location = null;
-    res.redirect(loc, 301);
+  const loc = req.session.get("location");
+
+  if (loc?.url) {
+    req.session.unset("location");
+    await req.session.save();
+    res.redirect(loc.url, 301);
   } else {
     res.redirect("/dashboard", 302);
   }

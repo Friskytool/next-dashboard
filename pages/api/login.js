@@ -1,8 +1,8 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import { withSession } from "next-session";
+import withSession from "../../utils/session";
 
-function handler(req, res) {
-  const data = req.session.userData;
+async function handler(req, res) {
+  const data = req.session.get("profile");
   if (data) {
     if (req.session.location) {
       res.redirect(req.session.location, 301);
@@ -17,6 +17,10 @@ function handler(req, res) {
       h = "http://";
     } else {
       h = "https://";
+    }
+    if (!req.session.get("location") && req.headers.referrer) {
+      req.session.set("location", { url: req.headers.referer });
+      await req.session.save();
     }
 
     let uri = `https://discord.com/api/oauth2/authorize?client_id=${

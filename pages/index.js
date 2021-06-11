@@ -2,7 +2,7 @@ import styles from "../styles/Home.module.css";
 import Header from "../components/header";
 import Layout from "../components/layout";
 import Link from "next/link";
-import { applySession } from "next-session";
+import withSession from "../utils/session";
 
 export default function Home({ profileData }) {
   return (
@@ -26,12 +26,8 @@ export default function Home({ profileData }) {
             >
               Friskytool
             </h1>
-            <p className="font-bold text-white">
+            <p className="font-bold text-white text-lg">
               The integration hub for your discord server
-            </p>
-            <p className="sm:w-96 text-white mt-3">
-              Boost your servers activity with <strong>quick</strong> and{" "}
-              <strong>easy</strong> giveaways
             </p>
 
             <div className="mt-6 items-stretch block">
@@ -166,7 +162,6 @@ export default function Home({ profileData }) {
   );
 }
 
-export async function getServerSideProps({ req, res }) {
-  await applySession(req, res);
+export const getServerSideProps = withSession(async ({ req, res }) => {
   return { props: { profileData: req.session.profileData || null } };
-}
+});

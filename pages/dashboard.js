@@ -1,14 +1,25 @@
-import { applySession } from "next-session";
 import Layout from "../components/layout";
 import Loader from "../components/loading";
 import Image from "next/image";
 import Link from "next/link";
 import useSWR from "swr";
+import useUser from "../utils/useUser";
+import withSession from "../utils/session";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 export default function Dashboard({ profileData }) {
+  const { user } = useUser({ redirectTo: "/api/login" });
   const { data, error } = useSWR("/api/guilds", fetcher);
+  console.log(user, data);
+  if (!user?.isLoggedIn) {
+    return (
+      <Layout>
+        <Loader />
+      </Layout>
+    );
+  }
+
   if (error) {
     console.log("error:" + error);
     return (
@@ -18,7 +29,7 @@ export default function Dashboard({ profileData }) {
     );
   } else if (!data?.data) {
     return (
-      <Layout profileData={profileData}>
+      <Layout>
         <Loader />
       </Layout>
     );
@@ -75,14 +86,4 @@ export default function Dashboard({ profileData }) {
       </Layout>
     );
   }
-}
-
-export async function getServerSideProps({ req, res }) {
-  await applySession(req, res);
-  if (!req.session.userData) {
-    req.session.location = req.url;
-    res.writeHead(302, { Location: "/api/login" }).end();
-    return { props: { profileData: {} } };
-  }
-  return { props: { profileData: req.session.profileData } };
 }

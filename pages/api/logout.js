@@ -1,7 +1,7 @@
-import { withSession } from "next-session";
+import withSession from "../../utils/session";
 
 function handler(req, res) {
-  req.session.userData = null;
+  req.session.destroy();
   res.redirect("/", 302);
 }
 
