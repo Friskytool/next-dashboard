@@ -8,18 +8,20 @@
     "start": "next start"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "5.15.3",
+    "@popperjs/core": "2.9.1",
     "autoprefixer": "^10.2.6",
     "cookie": "^0.4.1",
     "cookies": "^0.8.0",
     "cross-env": "^7.0.3",
-    "crypto-js": "^4.0.0",
     "next": "10.x",
-    "next-session": "^3.4.0",
+    "next-iron-session": "^4.2.0",
     "postcss": "^8.3.0",
     "react": "17.x",
     "react-cookie": "^4.0.3",
     "react-cookies": "^0.1.1",
     "react-dom": "17.x",
+    "swr": "^0.5.6",
     "tailwindcss": "^2.1.4"
   }
 }
