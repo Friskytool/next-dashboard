@@ -1,0 +1,132 @@
+{
+  "Giveaway": {
+    "giveawaygraph": "Graph of giveaways over time",
+    "multi": "View the multi of you or another user",
+    "gstart": "Instantly start a giveaway\n\nSeperators - \"|\" \",\" \" \"\n\nArguments :\n\nTime - The time until the giveaways ends you can attach [m, h, d, w] to the end to specify minutes, hours, days, or weeks\n\nWinners - The amount of winners the giveaway will have\n\nRequirement - The requirement a user needs to complete or \"none\". check out [docs.frisky.dev](https://docs.frisky.dev) for more info\n\nPrize - The title of the giveaway embed\n\nExamples:\n +gstart 1m 1w None test\n  > time: 1 minute | requirement:\n    winners: 1     | prize: test\n\n +gstart 5m30s 2w Community[role] nitro\n  >  time : 5 minutes, 30 seconds | requirement: community role\n  >  winners: 2\u200b           \u200b| prize: nitro\n\n +gstart 1h8m30s 1w 5[amari];;community[role] test\n  > requirement: level 5 amari + community role",
+    "gcreate": "Interactive giveaway creation process",
+    "greroll": "Reroll an ended giveaway with a message id or link",
+    "gend": "End an active giveaway with a message id or link",
+    "gend user": "End all giveaways by a specified user",
+    "gend channel": "End all giveaways in a specified channel",
+    "gend all": "End all giveaways in your server",
+    "glist": "List all the giveaways within a server.",
+    "gcancel": "Cancel an active giveaway with a message id or link"
+  },
+  "Utility": {
+    "boosters": "View the active boosters in your server",
+    "link": "Get's the bot's invite links",
+    "premium": "Premium command base. Use this for new and future premium commands\n\nWhat are custom bots?\nCustom bots are a new feature which allows you to use your very own customized bot inside your server. DM one of the developers in the support server to get your custom bot setup!\n\nYou can buy premium from our [patreon](https://patreon.com/Friskytool) for only $2/m",
+    "premium status": "View the status of premium in the server + user",
+    "premium setup": "This command is **not** finished yet\n\nSetup premium on a server",
+    "ping": "Check the bot's api latency",
+    "tp": "Ever have a hard time navigating channels in large servers?\nTeleport to any channel you specify with ease\n\nAll messages get deleted after 8 seconds\n\nPowered by [discord.gg/trades](https://discord.com/invite/wexvMfR4db)",
+    "stats": "Cool stats about the bot",
+    "about": "        Information about the bot\n\n        Created By:\u200b \u200bSquidtoon99 & Frisky\n\u200b\n        Premium:\u200b    \u200bhttps://patreon.com/friskytool\n\u200b\n        Website:\u200b    \u200bhttps://frisky.dev\n\u200b\n        Support Server:\u200b \u200b[discord.gg/TMu242J](https://discord.com/invite/TMu242J)\n\u200b\n        ",
+    "afkclear": "Purges a users current afk",
+    "afkset": "Overrides the current afk and sets a new afk for a member",
+    "afk": "Shows an afk message when a user pings you. You can use the default or include your own after the command.\nYou must run the command again to disable it.",
+    "help": "Shows the help command"
+  },
+  "Polls": {
+    "quickpoll": "Quickly setup a poll for the bot to run\narguments >\n - questions and choices : enter the question and the choices for the bot to have\n\nseperators >\n - default seperators you can seperate by \"|\" or \",\" if you do not provide a seperator we will seperate by spaces\n\npermissions >\n - requires \"ADD_REACTIONS\" and \"READ_MESSAGE HISTORY\"\n\n (max) > 10 choices\n (min) > 1 question - 2 choices\n\nexample >\n `+quickpoll Is Friskytool awesome?, Yes, No, What is Friskytool?, You promised cake`",
+    "poll": "Quick and easy yes/no poll, for multiple answers, use +quickpoll\narguments >\n - question : the question you are asking and the title of the embed\n\npermissions >\n - requires \"ADD_REACTIONS\" and \"READ_MESSAGE_HISTORY\"\n\nexample >\n `+poll Is Friskytool awesome?`"
+  },
+  "Timer": {
+    "tstart": "Quickly start a timer\nseperate the title from the description with `|`",
+    "tend": "End a timer using a message link or id"
+  },
+  "MathSolving": { "math": "Solve a math equation" },
+  "Settings": {
+    "enable": "Enable a plugin",
+    "disable": "Disable a plugin",
+    "disable-command": "Disable a command.\nThis does nothing if the plugin is disabled",
+    "enable-command": "Enable a previously disabled command.\nThis does nothing if the plugin is disabled",
+    "commands": "view the current enabled and disabled commands",
+    "plugins": "view the current enabled and disabled plugins",
+    "set": "Modify a setting",
+    "settings": "View a setting",
+    "reset": "Change a setting to its default"
+  },
+  "DankMemer": {
+    "trades": "View the current dank memer trades modal for a specified user",
+    "trades recieveleaderboard": "The leaderboard for most recieved in the entire server",
+    "trades itemleaderboard": "The leaderboard for most items shared in the entire bot",
+    "trades logs": "View your trading logs",
+    "trades globalleaderboard": "The leaderboard for most shared in the entire bot",
+    "trades serverleaderboard": "The leaderboard for most shared in the entire bot",
+    "trades graph": "View a line chart about the graph",
+    "trades server-logs": "View the trade logs for the server",
+    "trades dmcgraph": "View a graph about the dank memer coin trades",
+    "trades shareleaderboard": "The leaderboard for most shared in the entire server",
+    "trades popularitem": "Find the top servers for trading certain dank memer items",
+    "trades global-logs": "All logs for a user. Any server which has `trade_watcher` enabled and has had a transaction with the user provided will show up here"
+  },
+  "Voting": {
+    "vote": "View a link to vote for the bot on top.gg",
+    "vote leaderboard": "View the leaderboard for most voters",
+    "vote-reminder": "Enable or disable vote reminders"
+  },
+  "Fun": {
+    "chatpp": "Same as the pp command but polls the last few messages in chat and gets the users from that instead of input",
+    "pp": "100% accurate pp size measure",
+    "morse": "Translate to and from morse code!\n\nIf no message is provided friskytool will comb the chat logs for a message containing morse code and decode it",
+    "roll": "Roll a number from the maximum {default:5} to the minimum {default:0}\n+roll 1 6 > returns number between (and including) 1 and 6",
+    "coinflip": "Flip a coin! returns heads or tails",
+    "choose": "Choose a random item out of the choices\nChoices can be seperated by \"|\" and \",\" ",
+    "percent": "Give a percentage about something like you!\nEnter in a <thing> to take the percentage on and an adjective like cool and watch our powerful machines do the rest",
+    "8ball": "Ask a question and recieve a response",
+    "programmer8ball": "\"Ask a question and get a programmer-like response"
+  },
+  "MessageCounting": {
+    "messages": "The message count of a user in your server\n\nArguments:\n    - user : Discord Member = The user that you want to view the messages of\n     + default = Message Author",
+    "messages adjust": "Increase or decrease the message count of a user\n\nArguments:\n    - Users : list[Discord Member] = The user(s) you want to adjust\n    - Count : Number = The amount you want to adjust them by\n     + Maximum Value = 10k\n     + Minimum Value = -10k\n     + User Maximum = 50k",
+    "messages leaderboard": "The message counting leaderboard for your server\n\nArguments:\n    - page : Number = The page of the leaderboard you want to view\n     + default = 1",
+    "messages reset": "Reset the message count for certain groups",
+    "messages reset user": "Reset the message count for a user or multiple users\n\nArguments:\n    - Users : list[Discord Member] = The users whose message count should be reset\n     + multiple = True",
+    "messages reset all": "Reset the entire servers' message count",
+    "messages graph": "View a bar graph of your top message users"
+  },
+  "Donators": {
+    "donations": "View the donations of a user",
+    "donations eventdelete": "Delete an event used for donations",
+    "donations leaderboard": "Donation leaderboard view the <page: number (default = 1)> page of the leaderboard",
+    "donations events": "View the current donation events",
+    "donations global": "Donation leaderboard view the <page: number (default = 1)> page of the leaderboard",
+    "donations import": "Import donations from a source/pastebin link\n\n:warning: **REMEMBER TO SEND THE `RAW` VERSION**",
+    "donations add": "Adds a donation to a user. The donation must be a number parseable by the `{0.prefix}`math`",
+    "donations eventcreate": "Create an event for donations",
+    "donations clear": "Clears **all** donation logs from a user"
+  },
+  "Reputation": {
+    "rep": "Base reputation command because jxck is whiny\n\nThis gives reputation levels to another user",
+    "rep leaderboard": "The leaderboard for most reputation levels",
+    "rep check": "Check the reputation of a user",
+    "myrep": "Views your current rep\nyou can just run the rep command instead",
+    "editrep": "Adjusts the reputation of a user in your server"
+  },
+  "Tags": {
+    "tag": "Tag management with TagScript.\n\nThese commands use TagScriptEngine. [This site](https://phen-cogs.readthedocs.io/en/latest/) has documentation on how to use TagScript blocks.",
+    "tag info": "Get info about a tag that is stored on this server.",
+    "tag add": "Add a tag with TagScript.",
+    "tag raw": "Get a tag's raw content.",
+    "tag edit": "Edit a tag with TagScript.",
+    "tag remove": "Delete a tag."
+  },
+  "InviteCounting": {
+    "invited": "Command to see who invited the specificed user",
+    "invite": "Base invite counting command. Check a user's invites\nrun the leaderboard subcommand to see the top inviters.",
+    "invite import": "Import the invites from your server list.\n:warning: This **only** invites from joins and not leaves",
+    "invite reset": "Resets the invites for either the entire server or just a member",
+    "invite add-bonus": "add a bonus amount of invites to a user you can enter multiple users and then end the command with the bonus",
+    "invite leaderboard": "invite leaderboard view the <page: number (default = 1)> page of the leaderboard",
+    "testjoin": "Tests the join message + channel",
+    "codes": "Get all of the invite codes a user has created",
+    "joins": "Graph of the joins in your server",
+    "topdays": "Graph of the top days that members join",
+    "members": "Graph of the member count in your server",
+    "deleteinvite": "Delete an invite, useful during raids",
+    "topweeks": "Graph of the top weeks that members join",
+    "leaves": "Graph of the leaves in your server",
+    "joindata": "the data from users who have joined the server tracked through invites"
+  }
+}

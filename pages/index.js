@@ -22,6 +22,8 @@ export default function Home({ profileData }) {
                   "linear-gradient(110.46deg,#3e72ff 1.48%,#9a48ff 98.75%)",
                 backgroundClip: "text",
                 color: "transparent",
+                "-webkit-background-clip": "text",
+                "-webkit-text-fill-color": "transparent",
               }}
             >
               Friskytool
