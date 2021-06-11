@@ -4,7 +4,6 @@ import Loader from "../components/loading";
 import Image from "next/image";
 import Link from "next/link";
 import useSWR from "swr";
-import styles from "../styles/dashboard.module.css";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
@@ -33,7 +32,7 @@ export default function Dashboard({ profileData }) {
         items.push(
           <Link href={`/dashboard/${entry.id}`}>
             <div
-              className={`cursor-pointer button shadow-lg rounded-md p-4 max-w-sm w-screen mx-auto mb-4 bg-black transform transition duration-200 hover:scale-110 transition ease-out duration-700 hover:shadow-xl ${styles.guildcontainer}`}
+              className={`cursor-pointer button shadow-lg rounded-md p-4 max-w-sm w-screen mx-auto mb-4 bg-black transform transition duration-200 hover:scale-110 transition ease-out duration-700 hover:shadow-xl`}
             >
               <div className="px-4 py-4 whitespace-nowrap">
                 <div className="flex items-center">

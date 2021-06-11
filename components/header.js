@@ -21,12 +21,12 @@ function Header({ ...props }) {
   return (
     <div id={styles.headerContainer}>
       <div id={styles.mainLogoContainer}>
-        <Image
+        {/* <Image
           width={100}
           height={100}
           alt="Friskytool Discord bot logo"
           src="/friskytool-logo.png"
-        />
+        /> */}
       </div>
 
       <div id={styles.headerList}>

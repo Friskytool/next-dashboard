@@ -20,7 +20,7 @@ export default function Home({ profileData }) {
                 overflow: "visible",
                 background:
                   "linear-gradient(110.46deg,#3e72ff 1.48%,#9a48ff 98.75%)",
-                "background-clip": "text",
+                backgroundClip: "text",
                 color: "transparent",
               }}
             >
@@ -152,8 +152,8 @@ export default function Home({ profileData }) {
                 style={{
                   background:
                     "linear-gradient(321.73deg,#ffcd4b -1.09%,#ee6315 100.65%)",
-                  "background-clip": "text",
                   color: "transparent",
+                  backgroundClip: "text",
                 }}
               >
                 Invite Now!
@@ -167,7 +167,6 @@ export default function Home({ profileData }) {
 }
 
 export async function getServerSideProps({ req, res }) {
-  console.log(req, res);
   await applySession(req, res);
   return { props: { profileData: req.session.profileData || null } };
 }
