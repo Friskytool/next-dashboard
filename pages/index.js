@@ -1,5 +1,3 @@
-import styles from "../styles/Home.module.css";
-import Header from "../components/header";
 import Layout from "../components/layout";
 import Link from "next/link";
 import withSession from "../utils/session";
@@ -22,7 +20,7 @@ export default function Home({ profileData }) {
                   "linear-gradient(110.46deg,#3e72ff 1.48%,#9a48ff 98.75%)",
                 backgroundClip: "text",
                 color: "transparent",
-                "-webkit-background-clip": "text",
+                WebKitBackgroundClip: "text",
                 "-webkit-text-fill-color": "transparent",
               }}
             >
@@ -149,11 +147,11 @@ export default function Home({ profileData }) {
               <a
                 style={{
                   background:
-                    "linear-gradient(321.73deg,#ffcd4b -1.09%,#ee6315 100.65%)",
+                    "linear-gradient(321.73deg,#ffcd4b -1.09%,#ee6315 100.66%)",
                   color: "transparent",
                   backgroundClip: "text",
                   color: "transparent",
-                  "-webkit-background-clip": "text",
+                  WebkitBackgroundClip: "text",
                   "-webkit-text-fill-color": "transparent",
                 }}
               >
